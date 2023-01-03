@@ -43,7 +43,7 @@ function App(props) {
   };
   
   const [filter, setFilter] = useState('All');
-  
+
   const filterList = FILTER_NAMES.map((name) => (
     <FilterButton
       key={name}
@@ -79,7 +79,7 @@ function App(props) {
 
   return (
     <div className="todoapp stack-large">
-      <h1>TodoMatic</h1>
+      <h1>What to do</h1>
       <Form addTask={addTask} />
       <div className="filters btn-group stack-exception">
       {filterList}
@@ -90,6 +90,7 @@ function App(props) {
       <ul
         // role="list"
         className="todo-list stack-large stack-exception"
+        id="list"
         aria-labelledby="list-heading"
       >
         {taskList}
